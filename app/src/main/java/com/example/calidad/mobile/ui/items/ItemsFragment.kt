@@ -25,5 +25,4 @@ class ItemsFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
 }

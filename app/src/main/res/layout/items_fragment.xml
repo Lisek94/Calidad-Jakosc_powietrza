@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".mobile.ui.items.ItemsFragment">
+    tools:context=".mobile.ui.items.ItemsFragment"
+    android:background="@color/grey">
 
 
     <GridLayout
@@ -20,7 +21,7 @@
 
         <androidx.cardview.widget.CardView
             app:cardElevation="4dp"
-            android:id="@+id/button12"
+            android:id="@+id/card_view_quality"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="5dp"
@@ -29,7 +30,7 @@
 
         <androidx.cardview.widget.CardView
             app:cardElevation="4dp"
-            android:id="@+id/button11"
+            android:id="@+id/card_view_temperature"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="5dp"
@@ -38,7 +39,7 @@
 
         <androidx.cardview.widget.CardView
             app:cardElevation="4dp"
-            android:id="@+id/button10"
+            android:id="@+id/card_view_humidity"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="5dp"
@@ -47,7 +48,7 @@
 
         <androidx.cardview.widget.CardView
             app:cardElevation="4dp"
-            android:id="@+id/button9"
+            android:id="@+id/card_view_pressure"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="5dp"
