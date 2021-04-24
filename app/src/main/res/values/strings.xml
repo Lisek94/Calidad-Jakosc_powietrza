@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Calidad - jakosc powietrza</string>
+    <string name="hint_search_localization">Wyszukaj lokalizacje</string>
 </resources>
