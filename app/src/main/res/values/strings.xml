@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Calidad - jakosc powietrza</string>
     <string name="hint_search_localization">Wyszukaj lokalizacje</string>
+    <string name="logo_pressure">logo_Pressure</string>
+    <string name="logo_humidity">logo_Humidity</string>
+    <string name="logo_temperature">logo_Temperature</string>
+    <string name="logo_quality">logo_Quality</string>
 </resources>
