@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.calidad.R
 import com.example.calidad.databinding.ActivityMainBinding
+import com.example.calidad.mobile.network.RetrofitClient
 
 class MainActivity : AppCompatActivity() {
 
