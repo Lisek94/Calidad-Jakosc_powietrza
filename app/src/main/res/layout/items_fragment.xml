@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".mobile.ui.items.ItemsFragment"
-    android:background="@color/grey">
+    android:background="@color/black">
 
 
     <GridLayout
@@ -21,112 +21,125 @@
 
         <LinearLayout
             android:id="@+id/view_quality"
-            android:background="@color/white"
-            android:orientation="vertical"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_margin="5dp"
-            android:gravity="center"
+            android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1" >
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
 
             <ImageView
-                android:contentDescription="@string/logo_quality"
                 android:id="@+id/logo_Quality"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:contentDescription="@string/logo_quality"
                 android:src="@drawable/ic_quality_icon" />
 
             <TextView
                 android:id="@+id/qualityTextView"
-                android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/space_8dp"
                 android:textSize="48sp" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/view_temperature"
-            android:background="@color/white"
-            android:orientation="vertical"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_margin="5dp"
-            android:gravity="center"
+            android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1">
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="1dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
 
             <ImageView
-                android:contentDescription="@string/logo_temperature"
                 android:id="@+id/logo_Temperature"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:contentDescription="@string/logo_temperature"
                 android:src="@drawable/ic_temperature_icon" />
 
             <TextView
                 android:id="@+id/numberTemperatureTextView"
-                android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:layout_marginTop="@dimen/space_8dp"
                 android:textSize="48sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/view_humidity"
-            android:background="@color/white"
-            android:orientation="vertical"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_margin="5dp"
-            android:gravity="center"
+            android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1" >
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="2dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
 
             <ImageView
-                android:contentDescription="@string/logo_humidity"
                 android:id="@+id/logo_Humidity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:contentDescription="@string/logo_humidity"
                 android:src="@drawable/ic_humidity_icon" />
 
             <TextView
                 android:id="@+id/numberHumidityTextView"
-                android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/space_8dp"
                 android:textSize="48sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/view_pressure"
-            android:background="@color/white"
-            android:orientation="vertical"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_margin="5dp"
-            android:gravity="center"
+            android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1" >
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="2dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
 
             <ImageView
-                android:contentDescription="@string/logo_pressure"
                 android:id="@+id/logo_Pressure"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:contentDescription="@string/logo_pressure"
                 android:src="@drawable/ic_pressure_icon" />
 
             <TextView
                 android:id="@+id/numberPressureTextView"
-                android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="32sp" />
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/space_8dp"
+                android:textSize="48sp" />
 
         </LinearLayout>
     </GridLayout>

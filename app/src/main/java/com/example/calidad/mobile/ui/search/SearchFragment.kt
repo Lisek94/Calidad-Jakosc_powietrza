@@ -9,8 +9,6 @@ import android.view.ViewGroup
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.viewModels
 import com.example.calidad.databinding.SearchFragmentBinding
-import com.example.calidad.mobile.data.PollutionData
-import com.example.calidad.mobile.repository.Repository
 import com.google.android.material.snackbar.Snackbar
 
 class SearchFragment : Fragment() {
@@ -31,7 +29,7 @@ class SearchFragment : Fragment() {
                 binding.searchCityEditText.clearFocus()
                 binding.searchCityEditText.setQuery("", false)
                 if (query != null) {
-                    getWeather(geocoder,query)
+                    getWeather(query)
                 }
                 return true
             }
@@ -53,7 +51,7 @@ class SearchFragment : Fragment() {
         binding.topNameTextView.text = cityName
     }
 
-    private fun getWeather(geocoder: Geocoder,place: String) {
+    private fun getWeather(place: String) {
         try {
             val list = geocoder.getFromLocationName(place, 1)
             val lat = list[0].latitude

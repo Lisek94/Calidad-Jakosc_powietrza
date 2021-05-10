@@ -32,5 +32,15 @@ class ItemsFragment : Fragment() {
     private fun updateUI(data: PollutionData) {
         val temp = "${data.data.current.weather.tp}°C"
         binding.numberTemperatureTextView.text = temp
+
+        val humidity = "${data.data.current.weather.hu}%"
+        binding.numberHumidityTextView.text = humidity
+
+        val quality = "${data.data.current.pollution.aqius} AQI"
+        binding.qualityTextView.text = quality
+        binding.qualityTextView.setTextColor(viewModel.setupColor(data.data.current.pollution.aqius))
+
+        val pressure = "${data.data.current.weather.pr} hPa"
+        binding.numberPressureTextView.text = pressure
     }
 }
