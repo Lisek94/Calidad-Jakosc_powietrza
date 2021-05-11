@@ -5,4 +5,5 @@
     <string name="logo_humidity">logo_Humidity</string>
     <string name="logo_temperature">logo_Temperature</string>
     <string name="logo_quality">logo_Quality</string>
+    <string name="searchLocalizationLabel">Wyszukaj lokalizacje</string>
 </resources>
