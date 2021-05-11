@@ -7,5 +7,6 @@ class Repository {
 
     companion object {
         val nearestCityPollution = MutableLiveData<PollutionData>()
+        var cityName = ""
     }
 }

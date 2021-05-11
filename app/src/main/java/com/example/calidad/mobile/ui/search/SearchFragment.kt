@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.viewModels
 import com.example.calidad.databinding.SearchFragmentBinding
+import com.example.calidad.mobile.repository.Repository
 import com.google.android.material.snackbar.Snackbar
 
 class SearchFragment : Fragment() {
@@ -16,7 +17,6 @@ class SearchFragment : Fragment() {
     private var _binding: SearchFragmentBinding? = null
     private val viewModel by viewModels<SearchViewModel>()
     private lateinit var geocoder:Geocoder
-
 
     private val binding get() = _binding!!
 
@@ -33,11 +33,13 @@ class SearchFragment : Fragment() {
                 }
                 return true
             }
-
             override fun onQueryTextChange(newText: String?): Boolean {
                 return false
             }
         })
+
+        binding.topNameTextView.text = Repository.cityName
+
         return binding.root
     }
 
@@ -46,18 +48,10 @@ class SearchFragment : Fragment() {
         _binding = null
     }
 
-    private fun updateCity(lat: Double, lon: Double) {
-        val cityName = geocoder.getFromLocation(lat,lon,1)[0].locality
-        binding.topNameTextView.text = cityName
-    }
-
     private fun getWeather(place: String) {
         try {
-            val list = geocoder.getFromLocationName(place, 1)
-            val lat = list[0].latitude
-            val lon = list[0].longitude
-            viewModel.fetchPollution(lat,lon)
-            updateCity(lat, lon)
+            viewModel.setupWeather(geocoder,place)
+            binding.topNameTextView.text = Repository.cityName
         } catch (e: Exception) {
             Snackbar.make(binding.searchLayout, "Unfortunately we couldn't trace the place", Snackbar.LENGTH_SHORT
             ).show()
