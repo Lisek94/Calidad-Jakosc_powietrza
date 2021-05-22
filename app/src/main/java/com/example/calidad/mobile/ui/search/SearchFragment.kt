@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.SearchView
+import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import com.example.calidad.databinding.SearchFragmentBinding
 import com.example.calidad.mobile.repository.Repository
@@ -23,6 +24,8 @@ class SearchFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = SearchFragmentBinding.inflate(inflater, container, false)
         geocoder = Geocoder(requireContext())
+
+        Repository.nearestCityPollution.observe(viewLifecycleOwner, { setProgress(false) })
 
         binding.searchCityEditText.setOnQueryTextListener(object: SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(query: String?): Boolean {
@@ -50,11 +53,17 @@ class SearchFragment : Fragment() {
 
     private fun getWeather(place: String) {
         try {
+            setProgress(true)
             viewModel.setupWeather(geocoder,place)
             binding.topNameTextView.text = Repository.cityName
         } catch (e: Exception) {
             Snackbar.make(binding.searchLayout, "Unfortunately we couldn't trace the place", Snackbar.LENGTH_SHORT
             ).show()
         }
+    }
+
+    private fun setProgress(status: Boolean) {
+        binding.progressBar.isVisible = status
+
     }
 }
